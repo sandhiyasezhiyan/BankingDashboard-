@@ -1,0 +1,136 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #222;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Dashboard heading */
+h1 {
+    color: #173b70;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Search input */
+#searchInput {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d5dce8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #2459a9;
+    box-shadow: 0 0 0 3px #2459a91a;
+}
+
+/* Category filter buttons */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2459a9;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #173b70;
+}
+
+/* Product card layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Individual product card */
+.product-card {
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #173b700d;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #173b7018;
+}
+
+/* Product name */
+.product-card h2 {
+    color: #173b70;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Product details */
+.product-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Card button */
+.product-card button {
+    margin-top: 12px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .filters button {
+        flex: 1 1 auto;
+    }
+}
